@@ -1,0 +1,6 @@
+@import url("./reset.css");
+
+.clock {
+    text-align: center;
+    font-size: 4rem;
+}
