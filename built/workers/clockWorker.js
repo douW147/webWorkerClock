@@ -3,22 +3,22 @@ class Clock {
     constructor() {
         this.date = new Date();
     }
-    addZeroBeforeOnlyNumber(number) {
+    addZeroBeforeOnlyOneNumber(number) {
         let stringOfNumber = number.toString();
         if (stringOfNumber.length === 1) {
-            stringOfNumber = `0 ${number}`;
+            stringOfNumber = `0${number}`;
         }
         ;
         return stringOfNumber;
     }
     getHours() {
-        return this.addZeroBeforeOnlyNumber(this.date.getHours());
+        return this.addZeroBeforeOnlyOneNumber(this.date.getHours());
     }
     getMinutes() {
-        return this.addZeroBeforeOnlyNumber(this.date.getMinutes());
+        return this.addZeroBeforeOnlyOneNumber(this.date.getMinutes());
     }
     getSeconds() {
-        return this.addZeroBeforeOnlyNumber(this.date.getSeconds());
+        return this.addZeroBeforeOnlyOneNumber(this.date.getSeconds());
     }
     getTime() {
         return `${this.getHours()} : ${this.getMinutes()} : ${this.getSeconds()}`;
